@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karthikeyan R – Software Developer</title>
+<meta name="description" content="Karthikeyan R is a full-stack software developer in Bangalore building enterprise web apps in .NET, Java and React, and AI agents.">
+<meta property="og:title" content="Karthikeyan R – Software Developer">
+<meta property="og:description" content="Enterprise web apps, cloud and AI agents. .NET, Java, React, SQL Server, Azure.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230a84ff'/%3E%3Cstop offset='1' stop-color='%23bf5af2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='15' fill='url(%23g)'/%3E%3Cpath d='M21 48V16m0 18l22-18M25 30l19 18' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1fa; --text:#14151a; --text-2:#5b5f6b; --accent:#0a6cf0;
+  --glass:rgba(255,255,255,.55); --glass-strong:rgba(255,255,255,.72); --glass-line:rgba(255,255,255,.75);
+  --edge:rgba(20,21,26,.08); --shadow:0 1px 1px rgba(20,30,60,.04),0 12px 40px rgba(40,60,120,.12);
+  --spot:rgba(255,255,255,.7);
+  --b1:#5ac8fa; --b2:#bf5af2; --b3:#ff6482; --b4:#ffb340; --b5:#0a84ff;
+  --blue:#0a84ff; --purple:#bf5af2; --pink:#ff375f; --orange:#ff9f0a; --green:#30d158; --teal:#40c8e0; --red:#ff453a; --yellow:#ffd60a;
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text",Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#05060d;--text:#f5f6fa;--text-2:#a7abbb;--accent:#4aa3ff;
+    --glass:rgba(255,255,255,.07);--glass-strong:rgba(255,255,255,.12);--glass-line:rgba(255,255,255,.16);
+    --edge:rgba(255,255,255,.1);--shadow:0 12px 40px rgba(0,0,0,.45);--spot:rgba(255,255,255,.14);
+    --b1:#1d6fb8;--b2:#6a2fa8;--b3:#b3264a;--b4:#a8651a;--b5:#1b4fd1}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.5 var(--font);letter-spacing:-.011em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:10px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--accent);color:#fff;padding:8px 14px;border-radius:999px;z-index:30}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+
+/* living background */
+.bg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.blob{position:absolute;width:52vmax;height:52vmax;border-radius:50%;filter:blur(90px);opacity:.75;will-change:transform}
+.blob.a{background:var(--b1);left:-14vmax;top:-12vmax;animation:drift1 26s ease-in-out infinite alternate}
+.blob.b{background:var(--b2);right:-16vmax;top:6vmax;animation:drift2 32s ease-in-out infinite alternate}
+.blob.c{background:var(--b3);left:8vmax;bottom:-26vmax;animation:drift3 29s ease-in-out infinite alternate}
+.blob.d{background:var(--b4);right:6vmax;bottom:-30vmax;width:44vmax;height:44vmax;opacity:.6;animation:drift1 35s ease-in-out infinite alternate-reverse}
+@keyframes drift1{to{transform:translate(12vmax,10vmax) scale(1.15)}}
+@keyframes drift2{to{transform:translate(-14vmax,12vmax) scale(.9)}}
+@keyframes drift3{to{transform:translate(14vmax,-12vmax) scale(1.1)}}
+
+/* glass */
+.glass{position:relative;background:var(--glass);border:1px solid var(--glass-line);box-shadow:var(--shadow),inset 0 1px 0 rgba(255,255,255,.5);
+  backdrop-filter:blur(26px) saturate(180%);-webkit-backdrop-filter:blur(26px) saturate(180%);isolation:isolate}
+.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),var(--spot),transparent 55%);z-index:-1}
+.glass:hover::after{opacity:1}
+
+/* floating nav */
+.nav{position:sticky;top:12px;z-index:20;margin:12px auto 0;width:max-content;max-width:calc(100% - 24px);border-radius:999px;padding:6px 8px 6px 20px;display:flex;align-items:center;gap:22px}
+.nav b{font-weight:700;font-size:.95rem;letter-spacing:-.02em;white-space:nowrap}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:2px}
+.nav ul a{display:block;color:var(--text-2);font-size:.85rem;padding:7px 13px;border-radius:999px;transition:background .2s,color .2s}
+.nav ul a:hover{color:var(--text);text-decoration:none;background:var(--glass-strong)}
+.nav ul a[aria-current="true"]{color:var(--text);background:var(--glass-strong);box-shadow:inset 0 0 0 1px var(--glass-line)}
+
+/* type */
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.03em}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.07;text-align:center;margin-bottom:12px}
+.sub{color:var(--text-2);text-align:center;font-size:clamp(1.0625rem,2vw,1.35rem);max-width:34em;margin:0 auto 48px;line-height:1.4}
+section{padding:112px 0 0}
+.grad{background:linear-gradient(100deg,var(--blue) 0%,var(--purple) 45%,var(--pink) 78%,var(--orange) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* hero */
+.hero{padding:clamp(64px,13vh,140px) 0 0;text-align:center}
+.live{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:8px 16px 8px 12px;font-size:.9rem;color:var(--text-2);margin-bottom:28px;animation:rise .8s both}
+.live i{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(48,209,88,.6);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(48,209,88,0)}100%{box-shadow:0 0 0 0 rgba(48,209,88,0)}}
+.hero h1{font-size:clamp(3.2rem,11.5vw,8rem);line-height:1;letter-spacing:-.05em;font-weight:800;padding-bottom:.08em;animation:rise .9s .08s cubic-bezier(.2,.7,.2,1) both}
+.hero p.tag{font-size:clamp(1.25rem,3vw,1.9rem);line-height:1.25;color:var(--text-2);max-width:22em;margin:18px auto 0;font-weight:500;letter-spacing:-.02em;animation:rise .9s .18s cubic-bezier(.2,.7,.2,1) both}
+.actions{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;margin-top:34px;animation:rise .9s .28s cubic-bezier(.2,.7,.2,1) both}
+.pill{display:inline-flex;align-items:center;padding:13px 26px;border-radius:999px;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;font-weight:600;font-size:1.0625rem;box-shadow:0 8px 24px rgba(10,132,255,.35),inset 0 1px 0 rgba(255,255,255,.35);transition:transform .2s,box-shadow .2s}
+.pill:hover{text-decoration:none;transform:translateY(-2px);box-shadow:0 12px 30px rgba(10,132,255,.45),inset 0 1px 0 rgba(255,255,255,.35)}
+.ghost{display:inline-flex;align-items:center;padding:13px 24px;border-radius:999px;color:var(--text);font-weight:600;font-size:1.0625rem}
+.ghost:hover{text-decoration:none;background:var(--glass-strong)}
+.techs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:44px auto 0;max-width:760px;animation:rise .9s .4s cubic-bezier(.2,.7,.2,1) both}
+.techs span{border-radius:999px;padding:7px 16px;font-size:.9rem;font-weight:500;display:inline-flex;align-items:center;gap:8px}
+.techs span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:clamp(48px,9vh,96px)}
+.stat{border-radius:28px;padding:28px 22px;text-align:center}
+.stat strong{display:block;font-size:clamp(2.2rem,5vw,3.4rem);line-height:1;letter-spacing:-.04em;font-weight:800;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat span{display:block;margin-top:10px;color:var(--text-2);font-size:.9375rem;line-height:1.3}
+
+/* about */
+.about{max-width:780px;margin:0 auto;text-align:center;font-size:clamp(1.25rem,2.6vw,1.75rem);line-height:1.4;letter-spacing:-.02em;font-weight:500}
+.about p{margin:0 0 .9em}.about .dim{color:var(--text-2)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tile{border-radius:30px;padding:30px;display:flex;flex-direction:column;min-height:270px;overflow:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.tile:hover{transform:translateY(-4px)}
+.tile::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(110% 100% at 0% 0%,color-mix(in srgb,var(--c1) 34%,transparent),transparent 62%),radial-gradient(90% 90% at 100% 100%,color-mix(in srgb,var(--c2) 22%,transparent),transparent 65%)}
+.icon{width:46px;height:46px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 6px 16px color-mix(in srgb,var(--c1) 45%,transparent),inset 0 1px 0 rgba(255,255,255,.4)}
+.icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-size:1.65rem;line-height:1.1}
+.tile p{color:var(--text-2);margin:10px 0 0;font-size:1.0625rem;line-height:1.4}
+.tile .meta{margin-top:auto;padding-top:22px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font-size:.8125rem;font-weight:500;padding:4px 12px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--edge);color:var(--text-2)}
+.chip.wip{color:#fff;border:0;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.tile.big{grid-column:span 6;min-height:360px;justify-content:flex-end;color:#fff;background:linear-gradient(135deg,rgba(10,132,255,.92),rgba(124,58,237,.9) 55%,rgba(255,55,95,.88));border-color:rgba(255,255,255,.35)}
+.tile.big::before{background:radial-gradient(60% 80% at 85% 10%,rgba(255,255,255,.35),transparent 60%)}
+.tile.big h3{font-size:clamp(2.2rem,5.5vw,3.8rem);letter-spacing:-.04em}
+.tile.big p{color:rgba(255,255,255,.88);max-width:36em;font-size:clamp(1.0625rem,2vw,1.3rem)}
+.tile.big .icon{background:rgba(255,255,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.tile.big .chip{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.3);color:#fff}
+.tile.big::after{--spot:rgba(255,255,255,.28)}
+.span2{grid-column:span 2}.span3{grid-column:span 3}.span4{grid-column:span 4}
+
+.span6{grid-column:span 6}
+.tile.hpm{flex-direction:row;gap:32px;min-height:0}
+.hpm-text{flex:1.2;display:flex;flex-direction:column}
+.hpm-list{flex:1;margin:0;padding:0;list-style:none;display:grid;gap:12px;align-content:center}
+.hpm-list li{background:var(--glass-strong);border:1px solid var(--edge);border-radius:18px;padding:12px 16px;font-size:.95rem;line-height:1.4;color:var(--text-2)}
+.hpm-list b{color:var(--text)}
+
+/* experience */
+.jobs{display:grid;gap:16px;max-width:880px;margin:0 auto}
+.job{border-radius:30px;padding:clamp(24px,4vw,38px);display:grid;grid-template-columns:auto 1fr;gap:6px 22px}
+.job .icon{margin:0;grid-row:1/3}
+.job h3{font-size:1.4rem;line-height:1.2}
+.job .when{color:var(--text-2);margin:4px 0 14px;font-size:.9375rem}
+.job .body{grid-column:2}
+.job ul{margin:0;padding-left:1.15em}.job li{margin:8px 0}.job p{margin:0}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.skill{border-radius:26px;padding:24px}
+.skill h3{font-size:1.0625rem;letter-spacing:-.01em;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.skill h3::before{content:"";width:12px;height:12px;border-radius:4px;background:linear-gradient(135deg,var(--c1),var(--c2))}
+.skill div{display:flex;flex-wrap:wrap;gap:8px}
+.skill span{font-size:.875rem;padding:5px 13px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--edge)}
+
+/* education + contact */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:880px;margin:0 auto}
+.edu div{border-radius:26px;padding:24px}
+.edu strong{display:block;font-size:1.125rem;letter-spacing:-.02em;margin-bottom:4px}
+.edu span{color:var(--text-2);font-size:.9375rem}
+.contact{border-radius:40px;padding:clamp(40px,8vw,88px) 24px;text-align:center;margin-top:112px}
+.contact h2{margin-bottom:10px}.contact .sub{margin-bottom:30px}
+footer{padding:36px 0 40px;color:var(--text-2);font-size:.8125rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* reveal (only when JS is running) */
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+@media (max-width:860px){
+  .nav{padding:6px;gap:0}.nav b{display:none}.nav ul a{padding:7px 10px;font-size:.8rem}.nav ul li:nth-child(5){display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .bento{grid-template-columns:1fr}.bento>*,.tile.big{grid-column:auto!important}
+  .tile{min-height:0;padding:24px}.tile.big{min-height:300px}
+  .tile.hpm{flex-direction:column;gap:20px}.job{grid-template-columns:1fr}.job .icon{grid-row:auto}.job .body{grid-column:1}
+  section{padding-top:80px}.contact{margin-top:80px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="bg" aria-hidden="true"><div class="blob a"></div><div class="blob b"></div><div class="blob c"></div><div class="blob d"></div></div>
+
+<header class="nav glass">
+  <b>Karthikeyan R</b>
+  <nav aria-label="Sections"><ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul></nav>
+</header>
+
+<main id="main">
+<div class="wrap">
+  <div class="hero">
+    <div class="live glass"><i></i>Building NCC Precon AI right now</div>
+    <h1 class="grad">Karthikeyan R</h1>
+    <p class="tag">Software developer building enterprise web apps and AI agents.</p>
+    <div class="actions">
+      <a class="pill" href="mailto:rkarthik67@gmail.com">Email me</a>
+      <a class="ghost glass" href="https://github.com/rKarthik67">GitHub</a>
+      <a class="ghost glass" href="resume.html">Resume</a>
+    </div>
+    <div class="techs" aria-label="Main technologies">
+      <span class="glass" style="--c:var(--purple)">.NET</span>
+      <span class="glass" style="--c:var(--orange)">Java</span>
+      <span class="glass" style="--c:var(--teal)">React</span>
+      <span class="glass" style="--c:var(--blue)">Flutter</span>
+      <span class="glass" style="--c:var(--green)">SQL Server</span>
+      <span class="glass" style="--c:var(--blue)">Azure</span>
+      <span class="glass" style="--c:var(--pink)">AI agents</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat glass rv" style="--c1:var(--blue);--c2:var(--teal)"><strong>5+</strong><span>years building enterprise software</span></div>
+    <div class="stat glass rv" style="--c1:var(--purple);--c2:var(--pink)"><strong>$50M+</strong><span>in projects tracked by the app I lead</span></div>
+    <div class="stat glass rv" style="--c1:var(--green);--c2:var(--teal)"><strong>40%</strong><span>faster after a refactor I directed</span></div>
+    <div class="stat glass rv" style="--c1:var(--orange);--c2:var(--pink)"><strong>75%</strong><span>fewer production bugs after new QA practices</span></div>
+  </div>
+
+  <section id="about">
+    <h2 class="rv">About</h2>
+    <div class="about rv">
+      <p>I'm a full-stack developer in Bangalore. I work mostly in .NET Core, Java with Spring Boot, React and SQL Server, deployed on Azure and AWS.</p>
+      <p class="dim">At work I lead the team behind HITT Contracting's construction budgeting platform. Outside work I build AI agents and cross-platform apps.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="rv">Projects</h2>
+    <p class="sub rv">What I'm building now, and a few things I've shipped.</p>
+    <div class="bento">
+      <article class="tile glass big rv">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
+        <h3>NCC Precon AI</h3>
+        <p>An assistant for pre-construction work. It answers questions from project and estimating data using retrieval-augmented generation, and a team of construction agents handles the surrounding tasks.</p>
+        <div class="meta"><span class="chip">RAG</span><span class="chip">AI agents</span><span class="chip">.NET</span><span class="chip">React</span></div>
+      </article>
+      <article class="tile glass span6 hpm rv" style="--c1:var(--blue);--c2:var(--teal)">
+        <div class="hpm-text">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg></div>
+          <h3>HITT HPM – construction budgeting platform</h3>
+          <p>An enterprise web application that HITT Contracting uses to budget and bid construction projects. It tracks $50M+ of projects with their subcontractors, cost estimates and contract pricing in one place. I lead the team that maintains and extends it.</p>
+          <div class="meta"><span class="chip">In production</span><span class="chip">.NET Core</span><span class="chip">React</span><span class="chip">SQL Server</span><span class="chip">Azure</span></div>
+        </div>
+        <ul class="hpm-list">
+          <li><b>Real-time bidding analytics</b> and automated supply chain tracking.</li>
+          <li><b>CRM sync</b> through Azure Logic Apps, plus a subcontractor backlog import from JDE.</li>
+          <li><b>Pricing calculations</b> that link contract value, fees and insurance cost.</li>
+          <li><b>Azure CI/CD</b> with 99.9% availability and disaster recovery.</li>
+          <li><b>40% faster</b> and 75% fewer production bugs after refactoring and new QA practices.</li>
+        </ul>
+      </article>
+      <article class="tile glass span4 rv" style="--c1:var(--pink);--c2:var(--orange)">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2.5"/><path d="M9 21h6M12 17v4M10.5 9.5l4 2-4 2z"/></svg></div>
+        <h3>ARKTheater</h3>
+        <p>A movie and TV app for Android, iOS, macOS, Windows and web from one Flutter codebase, with TMDB browsing, a watchlist and native playback.</p>
+        <div class="meta"><span class="chip">Built</span><span class="chip">Flutter</span><span class="chip">Dart</span></div>
+      </article>
+      <article class="tile glass span2 rv" style="--c1:var(--purple);--c2:var(--blue)">
+        <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
+        <h3>C.L.A.R.A.</h3>
+        <p>An open-source personal AI agent with a memory palace and local-first voice.</p>
+        <div class="meta"><span class="chip wip">In progress</span><span class="chip">Rust</span></div>
+      </article>
+      <article class="tile glass span2 rv" style="--c1:var(--green);--c2:var(--teal)">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></div>
+        <h3>Kai Agent v2</h3>
+        <p>A personal agent that runs code, reads files and searches the web.</p>
+        <div class="meta"><span class="chip wip">In progress</span><span class="chip">Node.js</span></div>
+      </article>
+      <article class="tile glass span2 rv" style="--c1:var(--orange);--c2:var(--yellow)">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-4 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></div>
+        <h3>Hoehwa Kaiwa</h3>
+        <p>Conversation practice for Korean and Japanese, powered by Azure OpenAI.</p>
+        <div class="meta"><span class="chip wip">In progress</span><span class="chip">React</span></div>
+      </article>
+      <article class="tile glass span2 rv" style="--c1:var(--red);--c2:var(--pink)">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 010-9 6 6 0 0111.3 1.5A3.8 3.8 0 0117.5 18z"/></svg></div>
+        <h3>ARKVideoScrapper on Oracle Cloud</h3>
+        <p>Deploying the service to an Oracle Cloud VM in Mumbai.</p>
+        <div class="meta"><span class="chip wip">In progress</span><span class="chip">OCI</span></div>
+      </article>
+      <article class="tile glass span3 rv" style="--c1:var(--blue);--c2:var(--teal)">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Movies &amp; TV Shows web apps</h3>
+        <p>Two web versions of my TMDB-based browsing app. One is a React site deployed on Netlify. The other, Ark Play, is plain JavaScript with a watchlist, shared watchlists and light and dark themes.</p>
+        <div class="meta"><span class="chip">Built</span><span class="chip">React</span><span class="chip">JavaScript</span><a href="https://github.com/rKarthik67/Movie-and-tv-show-2">React source</a><a href="https://github.com/rKarthik67/ark-theater-play-web">Ark Play source</a></div>
+      </article>
+      <article class="tile glass span3 rv" style="--c1:var(--green);--c2:var(--blue)">
+        <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></div>
+        <h3>SQL Server tools for AI assistants</h3>
+        <p>MCP servers that connect SQL Server databases to Claude Code and Claude Desktop.</p>
+        <div class="meta"><span class="chip">Built</span><span class="chip">MCP</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="rv">Experience</h2>
+    <p class="sub rv">Five years across consulting and client delivery.</p>
+    <div class="jobs">
+      <article class="job glass rv" style="--c1:var(--blue);--c2:var(--teal)">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 20V9l8-5 8 5v11M9 20v-6h6v6"/></svg></div>
+        <div><h3>Team Lead, Software Developer – NCC Associates</h3>
+        <p class="when" style="margin-bottom:0">September 2024 to present · Remote, for HITT Contracting Inc. (US client)</p></div>
+        <div class="body"><ul>
+          <li>Lead the team that maintains and extends an enterprise construction budgeting application.</li>
+          <li>Refactored it for 40% better performance and 60% less technical debt.</li>
+          <li>Shipped real-time bidding analytics and automated supply chain tracking.</li>
+          <li>Worked with cloud architects on Azure CI/CD, reaching 99.9% availability with disaster recovery in place.</li>
+          <li>Introduced code review and testing practices that cut production bugs by 75%.</li>
+          <li>Built Azure Logic Apps that sync CRM opportunities, and fixed Azure SQL Managed Instance linked-server issues.</li>
+          <li>Mentored three junior developers in React, .NET Core and SQL Server.</li>
+        </ul></div>
+      </article>
+      <article class="job glass rv" style="--c1:var(--purple);--c2:var(--pink)">
+        <div class="icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <div><h3>Software Developer – Tata Consultancy Services</h3>
+        <p class="when" style="margin-bottom:0">December 2021 to January 2025 · Bangalore</p></div>
+        <div class="body"><ul>
+          <li>Built a client management web application from scratch with Spring Boot, React and Python.</li>
+          <li>Added Keycloak authentication and authorization, and deployed with Docker on AWS.</li>
+          <li>Developed a mobile identification service that replaced SIM-based verification with app-based sign-in and single sign-on.</li>
+        </ul></div>
+      </article>
+      <article class="job glass rv" style="--c1:var(--orange);--c2:var(--yellow)">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M21 15l-8-3V6a1 1 0 00-2 0v6l-8 3v2l8-1.5V19l-2 1.5V22l3-1 3 1v-1.5L13 19v-3.5l8 1.5z"/></svg></div>
+        <div><h3>Internship Trainee – Hindustan Aeronautics Limited</h3>
+        <p class="when" style="margin-bottom:0">July to November 2019 · Bangalore</p></div>
+        <div class="body"><p style="margin-top:14px">Worked on aircraft manufacturing and maintenance operations.</p></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2 class="rv">Skills</h2>
+    <p class="sub rv">The tools I reach for.</p>
+    <div class="skills">
+      <div class="skill glass rv" style="--c1:var(--blue);--c2:var(--teal)"><h3>Languages</h3><div><span>C#</span><span>Java</span><span>Python</span><span>JavaScript</span><span>Dart</span><span>SQL</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--purple);--c2:var(--blue)"><h3>Backend</h3><div><span>.NET Core</span><span>Spring Boot</span><span>FastAPI</span><span>Node.js</span><span>Express</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--pink);--c2:var(--orange)"><h3>Frontend</h3><div><span>React</span><span>Flutter</span><span>HTML and CSS</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--green);--c2:var(--teal)"><h3>Data</h3><div><span>SQL Server</span><span>Azure SQL MI</span><span>PostgreSQL</span><span>MySQL</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--teal);--c2:var(--blue)"><h3>Cloud and DevOps</h3><div><span>Azure</span><span>AWS</span><span>Oracle Cloud</span><span>Docker</span><span>CI/CD</span><span>Jenkins</span><span>GitLab</span><span>Git</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--orange);--c2:var(--red)"><h3>Identity</h3><div><span>Keycloak</span><span>Okta</span><span>Entra ID</span><span>OAuth 2.0</span><span>OIDC</span><span>JWT</span></div></div>
+      <div class="skill glass rv" style="--c1:var(--purple);--c2:var(--pink)"><h3>AI tools</h3><div><span>AI agents</span><span>Agent skills</span><span>Azure OpenAI</span><span>Ollama</span><span>Claude</span><span>MCP</span><span>RAG</span></div></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2 class="rv">Education</h2>
+    <p class="sub rv">Where I studied.</p>
+    <div class="edu">
+      <div class="glass rv"><strong>B.E. Mechanical Engineering</strong><span>The Oxford College of Engineering, Bangalore · 2016 to 2020</span></div>
+      <div class="glass rv"><strong>Java Full Stack and Python Data Science</strong><span>Tap Academy, Bangalore · 2020 to 2021</span></div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="contact glass rv">
+      <h2 class="grad">Let's talk.</h2>
+      <p class="sub">Email is the quickest way to reach me.</p>
+      <a class="pill" href="mailto:rkarthik67@gmail.com">rkarthik67@gmail.com</a>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Karthikeyan R</span><span>Bangalore, India</span></div></footer>
+
+<script>
+(function(){
+  // cursor light on glass surfaces
+  document.addEventListener('pointermove',function(e){
+    var g=e.target.closest&&e.target.closest('.glass');
+    if(!g)return;var r=g.getBoundingClientRect();
+    g.style.setProperty('--mx',(e.clientX-r.left)+'px');g.style.setProperty('--my',(e.clientY-r.top)+'px');
+  },{passive:true});
+  if(!('IntersectionObserver' in window)){[].forEach.call(document.querySelectorAll('.rv'),function(n){n.classList.add('in')});return}
+  // reveal on scroll
+  var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  [].forEach.call(document.querySelectorAll('.rv'),function(n,i){n.style.transitionDelay=(i%3)*70+'ms';rv.observe(n)});
+  // active nav
+  var links={};[].forEach.call(document.querySelectorAll('.nav ul a'),function(a){links[a.getAttribute('href').slice(1)]=a});
+  var spy=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].removeAttribute('aria-current');if(links[e.target.id])links[e.target.id].setAttribute('aria-current','true')}})},{rootMargin:'-35% 0px -55% 0px'});
+  Object.keys(links).forEach(function(id){var s=document.getElementById(id);if(s)spy.observe(s)});
+})();
+</script>
+</body>
+</html>
