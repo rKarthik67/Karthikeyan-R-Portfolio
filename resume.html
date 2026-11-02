@@ -4,106 +4,131 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Karthikeyan R – Resume</title>
-<meta name="description" content="Resume of Karthikeyan R, full-stack software developer in Bangalore.">
+<meta name="description" content="Resume of Karthikeyan R, software developer and team lead in Bangalore.">
 <style>
-:root{--text:#1d1d1f;--muted:#5f6370;--accent:#0a6cf0;--line:#e3e5ec;--bg:#f2f4fa;--page:#fff;
-  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+:root{--teal:#0f4a5a;--teal2:#1d6676;--ink:#1c2b30;--mute:#667579;--line:#a9bdc2;--panel:#eef5f5;
+  --sans:Calibri,Carlito,"Segoe UI",Helvetica,Arial,sans-serif;--serif:Cambria,Caladea,Georgia,serif}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:400 .98rem/1.55 var(--font);-webkit-font-smoothing:antialiased}
-.bar{max-width:820px;margin:20px auto 0;padding:0 20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.bar a,.bar button{font:600 .9rem var(--font);color:var(--accent);text-decoration:none;background:none;border:0;cursor:pointer;padding:6px 0}
-.page{max-width:820px;margin:12px auto 40px;background:var(--page);padding:clamp(24px,6vw,56px);border-radius:20px;box-shadow:0 10px 40px rgba(40,60,120,.1)}
-h1{font-size:2.3rem;line-height:1.1;letter-spacing:-.03em;margin:0 0 4px}
-.role{color:var(--muted);margin:0 0 10px;font-size:1.05rem}
-.contact{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:.9rem;color:var(--muted);margin-bottom:6px}
-.contact a{color:var(--accent);text-decoration:none}
-h2{font-size:1.05rem;letter-spacing:-.01em;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--text)}
-h3{font-size:1rem;margin:0}
-.job{margin-bottom:16px;break-inside:avoid}
-.job .meta{color:var(--muted);font-size:.88rem;margin:1px 0 6px}
-ul{margin:4px 0 0;padding-left:1.15em}li{margin:3px 0}
-p{margin:0 0 8px}
-.skills li{list-style:none;margin:3px 0;padding:0}.skills ul{padding:0}
+body{margin:0;background:#dfe5e7;color:var(--ink);font:400 9.4pt/1.38 var(--sans);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.bar{max-width:210mm;margin:14px auto 0;padding:0 8px;display:flex;justify-content:space-between;font:600 14px var(--sans)}
+.bar a,.bar button{color:var(--teal2);text-decoration:none;background:none;border:0;cursor:pointer;font:inherit;padding:4px 0}
+.page{width:210mm;min-height:297mm;margin:10px auto 30px;background:#fff;padding:13mm 12mm 11mm;box-shadow:0 8px 30px rgba(0,0,0,.15)}
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+h1{font:700 24pt/1.05 var(--sans);color:var(--teal);margin:0}
+.role{font:400 12.5pt/1.2 var(--serif);color:var(--teal2);margin:6px 0 8px}
+.tagline{margin:0;max-width:128mm;font-size:9.6pt}
+.where{text-align:right;font-weight:700;font-size:9.6pt;white-space:nowrap;padding-top:34px}
+.where span{display:block;font-weight:400;color:var(--mute);font-size:8.8pt}
+.where a{color:inherit;text-decoration:none}
+.summary{margin:15px 0 10px;font-size:9.4pt}
+.tags{display:flex;flex-wrap:wrap;gap:5px 7px;margin-bottom:14px}
+.tags span{border:1px solid var(--line);border-radius:7px;padding:2px 9px;font-size:8.4pt;color:#35505a}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 66mm;gap:7mm;align-items:start}
+h2{font:700 11.2pt/1.2 var(--serif);color:var(--teal);margin:0 0 8px}
+.eng{margin:0 0 8px;break-inside:avoid}
+.eng b{font-weight:700}.eng .ind{color:var(--mute);font-size:8.8pt}
+.eng p{margin:1px 0 0}
+ul{margin:3px 0 0;padding-left:15px}li{margin:2px 0}
+.stack{color:var(--mute);font-size:8.6pt;margin:4px 0 0}
+.side{background:var(--panel);border-radius:8px;padding:13px 14px 14px}
+.side h3{font:700 8.8pt/1.25 var(--sans);color:var(--teal);margin:9px 0 1px}
+.side h3:first-of-type{margin-top:0}
+.side p{margin:0;font-size:8.8pt;line-height:1.36}
+.side h2{margin:14px 0 6px}
+.side h2.first{margin-top:0}
+@media (max-width:760px){
+  .page{width:auto;min-height:0;margin:8px;padding:20px 16px}
+  header{flex-direction:column}.where{text-align:left;padding-top:0}
+  .cols{grid-template-columns:1fr}
+}
 @media print{
-  body{background:#fff;font-size:10pt}.bar{display:none}
-  .page{box-shadow:none;margin:0;padding:0;border-radius:0;max-width:none}
-  a{color:var(--text)}@page{margin:16mm}
+  @page{size:A4;margin:0}
+  body{background:#fff}.bar{display:none}
+  .page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:0;overflow:hidden}
 }
 </style>
 </head>
 <body>
 <div class="bar"><a href="index.html">Back to portfolio</a><button onclick="window.print()">Save as PDF</button></div>
 <main class="page">
-  <h1>Karthikeyan R</h1>
-  <p class="role">Software developer · Bangalore, India</p>
-  <div class="contact"><a href="mailto:rkarthik67@gmail.com">rkarthik67@gmail.com</a><a href="https://github.com/rKarthik67">github.com/rKarthik67</a></div>
+  <header>
+    <div>
+      <h1>Karthikeyan R</h1>
+      <div class="role">Team Lead, Software Developer</div>
+      <p class="tagline">Leads delivery of .NET, Java and React applications on Azure and AWS, and builds AI agents and RAG assistants for construction teams.</p>
+    </div>
+    <div class="where">Bangalore, India<span><a href="mailto:rkarthik67@gmail.com">rkarthik67@gmail.com</a></span><span><a href="https://github.com/rKarthik67">github.com/rKarthik67</a></span></div>
+  </header>
 
-  <h2>Summary</h2>
-  <p>Full-stack developer with 5+ years building and maintaining enterprise web applications in .NET Core, Java/Spring Boot, React and SQL Server on Azure. Currently team lead on a construction budgeting platform for a US client, and building AI agent and cross-platform app projects on the side.</p>
+  <p class="summary">Full-stack developer with 5+ years of experience building enterprise web applications from requirement to production. Leads the team that maintains and extends HITT Contracting's construction budgeting platform: bidding analytics, CRM and JDE integrations through Azure Logic Apps, Azure CI/CD at 99.9% availability, and Azure SQL Managed Instance data workflows. Earlier at Tata Consultancy Services, built a client management platform with Spring Boot, React and Keycloak, and a mobile identity service with single sign-on. Works across .NET Core, Java with Spring Boot, React and Flutter, SQL Server and PostgreSQL, and is now building AI agents, retrieval-augmented generation (RAG) assistants and cross-platform apps.</p>
 
-  <h2>Experience</h2>
-  <div class="job">
-    <h3>Team Lead, Software Developer – NCC Associates (client: HITT Contracting Inc.)</h3>
-    <p class="meta">Sep 2024 – Present · Remote, US client</p>
-    <ul>
-      <li>Lead the team maintaining and enhancing an enterprise construction budgeting web application managing $50M+ projects, subcontractors and cost estimates.</li>
-      <li>Directed refactoring that improved application performance by 40% and cut technical debt by 60%.</li>
-      <li>Delivered real-time bidding analytics and automated supply chain tracking.</li>
-      <li>Worked with senior cloud architects on CI/CD pipelines in Azure, reaching 99.9% availability with disaster recovery in place.</li>
-      <li>Set up QA practices (code review, testing frameworks) that reduced production bugs by 75%.</li>
-      <li>Built Azure Logic Apps that sync CRM opportunities into the application and handled the JDE subcontractor backlog import.</li>
-      <li>Resolved Azure SQL Managed Instance linked-server problems: identity inserts, distributed transaction deadlocks and cross-server stored procedures.</li>
-      <li>Mentored 3 junior developers in React.js, .NET Core and SQL Server; coordinated with PMs, estimators and executives.</li>
-    </ul>
-  </div>
-  <div class="job">
-    <h3>Software Developer – Tata Consultancy Services (TCS)</h3>
-    <p class="meta">Dec 2021 – Jan 2025 · Bangalore</p>
-    <ul>
-      <li>Built a client management web application from scratch with Spring Boot, React.js and Python scripts, mostly on the backend.</li>
-      <li>Implemented Keycloak authentication and authorization; deployed with Docker on AWS; used Jenkins, GitLab and Bitbucket.</li>
-      <li>Developed the Mobile Identification Service: secure mobile-app authentication replacing SIM-based verification, with SSN-based enrolment and Single Sign-On.</li>
-      <li>Worked with cross-functional teams to meet security compliance standards.</li>
-    </ul>
-  </div>
-  <div class="job">
-    <h3>Internship Trainee – Hindustan Aeronautics Limited (HAL)</h3>
-    <p class="meta">Jul 2019 – Nov 2019 · Bangalore</p>
-    <ul><li>Gained hands-on exposure to aircraft manufacturing, maintenance and management.</li></ul>
+  <div class="tags">
+    <span>Construction budgeting and estimating</span><span>Bidding analytics</span><span>CRM and ERP integration</span>
+    <span>Mobile identity and single sign-on</span><span>AI agents and RAG</span><span>Cross-platform apps</span><span>Azure and AWS delivery</span>
   </div>
 
-  <h2>Projects</h2>
-  <ul>
-    <li><b>HITT HPM</b> (production) – enterprise construction budgeting web application used by HITT Contracting to budget and bid projects worth $50M+, covering subcontractors, cost estimates and contract pricing. .NET Core, React, SQL Server and Azure; real-time bidding analytics, CRM sync through Azure Logic Apps, JDE subcontractor backlog import, and Azure CI/CD at 99.9% availability.</li>
-    <li><b>NCC Precon AI</b> – AI assistant for pre-construction work using retrieval-augmented generation (RAG) over project and estimating data, with a team of construction agents.</li>
-    <li><b>ARKTheater</b> (Flutter/Dart) – cross-platform movie and TV app for Android, iOS, macOS, Windows and web: TMDB browse, search and watchlist, native video playback, and multi-source fallback with an in-app web view.</li>
-    <li><b>C.L.A.R.A.</b> (in progress) – open-source personal AI agent with a Rust core, Python/Node bindings, a memory palace and local-first voice; targets Windows, Linux and macOS first.</li>
-    <li><b>Kai Agent v2</b> (in progress) – personal full-stack AI agent in Node.js with code execution, file access, web search, image generation and a WebSocket terminal.</li>
-    <li><b>Hoehwa Kaiwa</b> (in progress) – Korean and Japanese conversation-practice app on React and Express, using Azure OpenAI with Claude as an optional provider.</li>
-    <li><b>ARKVideoScrapper on Oracle Cloud</b> (in progress) – deploying the project to an Oracle Cloud (OCI) VM in the Mumbai region from a written deployment plan.</li>
-    <li><b>Movies &amp; TV Shows web apps</b> – two web versions of a TMDB-based browsing app: a React.js app deployed on Netlify (<a href="https://github.com/rKarthik67/Movie-and-tv-show-2">React repo</a>) and Ark Play, a plain JavaScript app with a watchlist, shared watchlists and light/dark themes (<a href="https://github.com/rKarthik67/ark-theater-play-web">Ark Play repo</a>).</li>
-    <li><b>SQL Server MCP tooling</b> – configured MCP servers connecting SQL Server databases to Claude Code and Claude Desktop.</li>
-    <li><b>Identity and cloud learning</b> – hands-on Okta, Microsoft Entra ID and Keycloak federation (React + ASP.NET Core), and Azure Infrastructure as Code (CLI, Bicep, Terraform).</li>
-  </ul>
+  <div class="cols">
+    <div>
+      <h2>Selected engagements</h2>
 
-  <h2>Skills</h2>
-  <div class="skills"><ul>
-    <li><b>Languages:</b> C#, Java, Python, JavaScript, HTML5/CSS3, SQL</li>
-    <li><b>Backend:</b> .NET Core, Spring Boot, FastAPI, Node.js/Express, Maven</li>
-    <li><b>Frontend:</b> React.js, Flutter</li>
-    <li><b>Data:</b> SQL Server, Azure SQL Managed Instance, PostgreSQL, MySQL</li>
-    <li><b>Cloud and DevOps:</b> Azure (Logic Apps, SQL MI), AWS, Oracle Cloud (OCI), Docker, CI/CD, Jenkins, GitLab, Bitbucket, Git</li>
-    <li><b>Security:</b> Keycloak, Okta, Microsoft Entra ID, OAuth 2.0 / OIDC, JWT</li>
-    <li><b>AI tooling:</b> Azure OpenAI, Ollama, Claude, MCP servers, AI agents, agent skills, RAG</li>
-  </ul></div>
+      <div class="eng">
+        <b>HITT Contracting, United States</b> <span class="ind">Construction, budgeting and bidding · via NCC Associates · Sep 2024 to present</span>
+        <p>HPM, an enterprise platform that budgets and bids projects worth $50M+ with their subcontractors, cost estimates and contract pricing. Team lead: refactored for 40% better performance and 60% less technical debt, added real-time bidding analytics and supply chain tracking, set up code review and testing that cut production bugs by 75%, and mentored three junior developers. Built Azure Logic Apps that sync CRM opportunities, a JDE subcontractor backlog import, and fixed Azure SQL Managed Instance linked-server issues. Currently exploring AI integration for construction project analytics.</p>
+      </div>
 
-  <h2>Education</h2>
-  <ul>
-    <li><b>B.E. Mechanical Engineering</b> – The Oxford College of Engineering, Bangalore · 2016 – 2020 · 7.46 CGPA</li>
-    <li><b>Java Full Stack Development and Python Data Science</b> – Tap Academy, Bangalore · Dec 2020 – Nov 2021</li>
-    <li><b>Pre-University (PCME)</b> – Krupanidhi Pre University, Bangalore · 2014 – 2016 · 77.5%</li>
-    <li><b>High School</b> – Shantinikethan Educational Institution, Bangalore · 2004 – 2014 · 80.16%</li>
-  </ul>
+      <div class="eng">
+        <b>NCC Precon AI, United States</b> <span class="ind">Construction pre-construction · AI</span>
+        <p>Assistant for pre-construction work that answers questions from project and estimating data using retrieval-augmented generation, with a team of construction agents for the surrounding tasks.</p>
+      </div>
+
+      <div class="eng">
+        <b>Tata Consultancy Services, India</b> <span class="ind">Client management · Dec 2021 to Jan 2025</span>
+        <p>Built a client management web application from scratch with Spring Boot, React and Python scripts, mostly the backend. Added Keycloak authentication and authorization, containerised with Docker on AWS, with Jenkins, GitLab and Bitbucket pipelines.</p>
+      </div>
+
+      <div class="eng">
+        <b>Mobile Identification Service, TCS</b> <span class="ind">Mobile security</span>
+        <p>Secure mobile-app authentication that replaced SIM-based verification, with SSN-based enrolment and single sign-on, delivered with cross-functional teams to meet security compliance standards.</p>
+      </div>
+
+      <div class="eng">
+        <b>Personal and open-source builds</b> <span class="ind">India</span>
+        <ul>
+          <li><b>ARKTheater</b>, a Flutter and Dart movie and TV app for Android, iOS, macOS, Windows and web, with TMDB browsing, watchlist and native playback. Plus two web versions (React on Netlify, and plain JavaScript).</li>
+          <li><b>C.L.A.R.A.</b> (in progress), an open-source personal AI agent with a Rust core, memory palace and local-first voice. <b>Kai Agent v2</b> (in progress), a Node.js agent that runs code, reads files and searches the web.</li>
+          <li><b>Hoehwa Kaiwa</b> (in progress), a Korean and Japanese practice app on React and Express with Azure OpenAI.</li>
+          <li><b>ARKVideoScrapper on Oracle Cloud</b> (in progress), deployed to an OCI VM. <b>SQL Server MCP tools</b> connecting databases to Claude Code and Claude Desktop.</li>
+        </ul>
+        <div class="stack">Stack across these: Flutter, React, Node.js, Rust, Express, Azure OpenAI, Oracle Cloud, MCP.</div>
+      </div>
+
+      <div class="eng">
+        <b>Hindustan Aeronautics Limited, India</b> <span class="ind">Internship trainee · Jul to Nov 2019</span>
+        <p>Aircraft manufacturing, maintenance and management operations.</p>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h2 class="first">Technical skills</h2>
+      <h3>Languages and frameworks</h3>
+      <p>C#, .NET Core; Java, Spring Boot, Maven; Python, FastAPI; JavaScript, Node.js, Express; Dart, Flutter; React; SQL; HTML5 and CSS3</p>
+      <h3>Architecture and integration</h3>
+      <p>REST APIs, Azure Logic Apps workflows, CRM and JDE integration, retrieval-augmented generation, AI agents and agent skills, MCP servers</p>
+      <h3>Cloud platforms</h3>
+      <p>Azure: Logic Apps, SQL Managed Instance, CI/CD, disaster recovery. AWS. Oracle Cloud (OCI)</p>
+      <h3>Identity and security</h3>
+      <p>Keycloak, Okta, Microsoft Entra ID, OAuth 2.0, OpenID Connect, JWT, single sign-on</p>
+      <h3>DevOps</h3>
+      <p>Docker, Jenkins, GitLab, Bitbucket, Git, TortoiseGit, Azure CI/CD pipelines, code review and QA practices</p>
+      <h3>Data and runtime</h3>
+      <p>SQL Server, Azure SQL Managed Instance, PostgreSQL, MySQL, linked servers and stored procedures</p>
+      <h3>AI tooling</h3>
+      <p>Azure OpenAI, Ollama, Claude, Claude Code</p>
+
+      <h2>Education</h2>
+      <p><b>B.E. Mechanical Engineering</b>, The Oxford College of Engineering, Bangalore, 2016 to 2020<br>Java Full Stack Development and Python Data Science, Tap Academy, Bangalore, 2020 to 2021</p>
+    </aside>
+  </div>
 </main>
 </body>
 </html>
